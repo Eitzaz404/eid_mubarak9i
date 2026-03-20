@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak - Eitzaz Chaudhary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Profile Picture -->
+    <div class="profile-section">
+        <img src="APNI_PICTURE_KA_URL_YAHAN_DALO" alt="Profile" class="profile-pic">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-link active" data-page="home">Greeting</a>
+            <a href="#" class="nav-link" data-page="duas">Duas</a>
+            <a href="#" class="nav-link" data-page="about">About</a>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page active-page">
+        <div class="card">
+            <div class="eid-decoration">🌙✨🌙</div>
+            <h1>Eid Mubarak</h1>
+            <h2>FROM EITZAZ CHAUDHARY</h2>
+            <div class="divider"></div>
+            <p class="blessing">May this blessed occasion bring you and your family peace, joy, and countless blessings.</p>
+            <button id="viewGreetingBtn" class="greeting-btn">
+                <span>✨ View Greeting ✨</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Duas Page -->
+    <div id="duasPage" class="page">
+        <div class="card">
+            <h2>🌙 Special Duas 🌙</h2>
+            <div class="dua-container">
+                <div class="dua-item">
+                    <p class="arabic">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ</p>
+                    <p class="translation">"Taqabbalallahu minna wa minkum"</p>
+                    <p class="meaning">May Allah accept from us and from you</p>
+                </div>
+                <div class="dua-item">
+                    <p class="arabic">عِيدُكُمْ مُبَارَكٌ</p>
+                    <p class="translation">"Eidukum Mubarak"</p>
+                    <p class="meaning">May your Eid be blessed</p>
+                </div>
+                <div class="dua-item">
+                    <p class="arabic">جَعَلَكُمُ اللَّهُ مِنَ الْعَائِدِينَ</p>
+                    <p class="translation">"Ja'alakumullahu minal 'a'idin"</p>
+                    <p class="meaning">May Allah make you among those who return</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="aboutPage" class="page">
+        <div class="card">
+            <h2>📖 About Eid-ul-Fitr</h2>
+            <div class="about-content">
+                <p>Eid-ul-Fitr is a blessed festival that marks the end of Ramadan, the holy month of fasting.</p>
+                <p>It is a day of joy, gratitude, and celebration with family and friends.</p>
+                <p>Muslims around the world gather for special prayers, share meals, and give charity to those in need.</p>
+                <div class="eid-traditions">
+                    <h3>✨ Traditions ✨</h3>
+                    <ul>
+                        <li>🕌 Special Eid prayer (Salat al-Eid)</li>
+                        <li>🍽️ Festive meals with family</li>
+                        <li>🎁 Giving gifts (Eidi) to children</li>
+                        <li>🤝 Visiting relatives and friends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="fireworks"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
