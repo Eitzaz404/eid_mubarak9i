@@ -125,6 +125,11 @@ h2 {
     font-weight: 500;
 }
 
+/* FROM aur name ke beech gap */
+.card h2:first-of-type {
+    margin-bottom: 20px;  /* gap adjust karne ke liye ye value badhao/ghatao */
+}
+
 /* Software Engineer Title */
 .title {
     color: #ffd966;
