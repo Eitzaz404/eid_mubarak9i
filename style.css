@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a2f2f 0%, #1a4a3a 50%, #0d2e2e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Profile Picture */
+.profile-section {
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid gold;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: white;
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.nav-link.active {
+    color: #1e3a2f;
+    background: gold;
+    box-shadow: 0 0 15px gold;
+}
+
+/* Pages */
+.page {
+    display: none;
+    width: 100%;
+    padding: 180px 20px 50px;
+}
+
+.page.active-page {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Card */
+.card {
+    max-width: 650px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    padding: 40px 35px;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.eid-decoration {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+    animation: float 3s infinite;
+}
+
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, gold, #ffaa33, #ffdd88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Amiri', serif;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #ffd966;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, gold, transparent);
+    margin: 15px auto;
+}
+
+.blessing {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+.greeting-btn {
+    background: linear-gradient(135deg, gold, #ffaa33);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #1e3a2f;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.greeting-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px gold;
+}
+
+/* Duas Page */
+.dua-container {
+    margin-top: 15px;
+}
+
+.dua-item {
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 25px;
+    padding: 15px;
+    margin: 12px 0;
+    transition: all 0.3s;
+}
+
+.dua-item:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateX(5px);
+}
+
+.arabic {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    color: gold;
+    margin-bottom: 5px;
+}
+
+.translation {
+    color: #ffd966;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.meaning {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* About Page */
+.about-content p {
+    color: white;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.eid-traditions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.eid-traditions h3 {
+    color: gold;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.eid-traditions ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+}
+
+.eid-traditions li {
+    color: white;
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+/* Fireworks Canvas */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .navbar {
+        top: 90px;
+    }
+    
+    .nav-container {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .page {
+        padding: 150px 15px 40px;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .blessing {
+        font-size: 0.95rem;
+    }
+    
+    .arabic {
+        font-size: 1rem;
+    }
+}
